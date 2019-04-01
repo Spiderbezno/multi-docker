@@ -11,6 +11,6 @@ docker push spiderbezno/multi-server:$SHA
 docker push spiderbezno/multi-worker:$SHA
 
 kubectl apply -f k8s
-kubectl set images deployments/server-deployment server=spiderbezno/multi-server:$SHA
-kubectl set images deployments/client-deployment client=spiderbezno/multi-client:$SHA
-kubectl set images deployments/worker-deployment worker=spiderbezno/multi-worker:$SHA
+kubectl set image deployments/server-deployment server=spiderbezno/multi-server:$SHA
+kubectl set image deployments/client-deployment client=spiderbezno/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=spiderbezno/multi-worker:$SHA
